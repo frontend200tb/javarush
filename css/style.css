@@ -4,31 +4,33 @@ body {
 }
 
 .page {
-  padding: 10px 0 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
   font-family: Helvetica, Arial, verdana, serif;
   line-height: 1.6;
   background-color: #E8EBF1;
 }
 
-.menu-text {
-  color: #7a869a;
-}
-
 /***************
 CONTAINER
 ***************/
-.container {
+.container-cards {
   margin: 0 auto;
+  padding: 10px;
   max-width: 1280px;
 }
 
 @media (max-width: 1300px) {
-  .container {
+  .container-cards {
     max-width: 1100px;
   }
 }
 
-.container-quest {
+.container {
   margin: 0 auto;
   padding: 10px;
   max-width: 700px;
@@ -37,10 +39,17 @@ CONTAINER
 h1,
 h2,
 h3 {
-  text-align: center;
   line-height: 1;
 }
 
+
+header h4 {
+  line-height: 0.5;
+}
+
+.menu-text {
+  color: #7a869a;
+}
 
 /***************
 CARDS
@@ -87,6 +96,10 @@ CARDS
   background-color: #fff;
 }
 
+.card {
+  text-align: center;
+}
+
 @media (max-width: 1300px) {
   .card {
     width: 340px;
@@ -94,7 +107,7 @@ CARDS
 }
 
 .card:hover {
-  background-color: #efe;
+  background-color: #f1f1f1;
 }
 
 .card-in {
@@ -107,13 +120,17 @@ CARDS
   border-radius: 10px;
 }
 
+.card-header {
+  text-align: center;
+}
+
 .card-text {
   padding: 0 20px;
 }
 
 
 .img-quest {
-  max-width: 700px;
+  width: 100%;
 }
 
 /***************
@@ -132,4 +149,41 @@ LINKS
   flex-direction: row;
   justify-content: flex-start;
   gap: 20px;
+}
+
+
+/***************
+FOOTER
+***************/
+footer {
+  margin-top: 10px;
+  text-align: center;
+  background-color: #2cc1cc;
+}
+
+
+/***************
+LEVEL
+***************/
+.card.card-lev {
+  justify-content: start;
+  gap: 0;
+}
+
+.card-header.card-lev {
+  padding-left: 50px;
+  text-align: left;
+  font-size: 14px;
+}
+
+.card-min.card-lev {
+  padding-left: 50px;
+  text-align: left;
+  font-size: 12px;
+}
+
+.card-text.card-lev {
+  padding: 20px;
+  text-align: left;
+  font-size: 14px;
 }
